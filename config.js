@@ -114,6 +114,28 @@ window.SITE_CONFIG = {
   ],
 
   /**
+   * Continuous 
+   */
+  techTicker: [
+    "Python",
+    "JavaScript",
+    "HTML & CSS",
+    "n8n",
+    "React",
+    "MySQL",
+    "Google Cloud",
+    "Figma",
+    "WordPress",
+    "Looker Studio",
+    "RStudio",
+    "Cursor",
+    "Zapier",
+    "Slack APIs",
+    "UI/UX",
+    "Accessibility",
+  ],
+
+  /**
    * Technical & soft skills
    */
   skillCategories: [
@@ -140,7 +162,6 @@ window.SITE_CONFIG = {
       more: [
         "React Native",
         "cPanel",
-        "Figma",
         "Lucidchart",
         "WordPress",
         "Zapier",

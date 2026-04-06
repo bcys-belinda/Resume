@@ -137,9 +137,9 @@
     aside.className = "skills-pair-row__aside";
     const tool = (cat.favourite || cat.toolsInUse || "").trim();
     aside.innerHTML = `
-      <div class="favourite-card">
-        <p class="favourite-label">Favourite</p>
-        <p class="favourite-value">${tool ? escapeHtml(tool) : "—"}</p>
+      <div class="tools-in-use-card">
+        <p class="tools-in-use-label">Favourite</p>
+        <p class="tools-in-use-value">${tool ? escapeHtml(tool) : "—"}</p>
       </div>
     `;
     if (!tool) {
@@ -151,6 +151,17 @@
     row.appendChild(aside);
     skillsBars.appendChild(row);
   });
+
+  /* Skills*/
+  const tickerRoot = $("#tech-ticker");
+  const tickerItems = (cfg.techTicker || []).filter(Boolean);
+  if (tickerRoot && tickerItems.length) {
+    const chips = tickerItems
+      .map((t) => `<span class="tech-ticker__chip">${escapeHtml(String(t))}</span>`)
+      .join("");
+    tickerRoot.innerHTML = `<div class="tech-ticker__track">${chips}${chips}</div>`;
+    tickerRoot.hidden = false;
+  }
 
   /* Languages */
   const languagesSection = $("#languages");
