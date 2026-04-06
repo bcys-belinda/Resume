@@ -1,62 +1,58 @@
-/**
- * Personalise your site here — edit these values and refresh the page.
- */
 window.SITE_CONFIG = {
-  name: "Your Name",
+  name: "Belinda Cheah Yi Shuen",
   tagline: "Designer & developer building thoughtful digital experiences.",
   shortBio:
     "I craft accessible, performant interfaces and care about clear communication with teams and users.",
-  email: "hello@example.com",
-  location: "Your City, Country",
+  email: "belindacheahyishuen@gmail.com",
+  location: "Singapore, Singapore",
   social: {
-    linkedin: "https://www.linkedin.com/in/yourprofile",
-    github: "https://github.com/yourusername",
+    linkedin: "https://www.linkedin.com/in/myprofile",
+    github: "https://github.com/bcys-belinda",
   },
-  /** Replace with your Formspree form endpoint: https://formspree.io */
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+  /** Replace with my Formspree form endpoint: https://formspree.io */
+  formspreeEndpoint: "https://formspree.io/f/mkopkbdo",
 
   /**
    * Work history — newest first. Optional: location, summary, highlights (bullet strings).
-   * Dates are free text (e.g. "Jan 2022" and "Present").
    */
   experience: [
     {
-      title: "Your job title",
-      company: "Company name",
-      location: "City, Country",
-      start: "2023",
+      title: "GRIT Trainee, Corporate Security(Systems and Technology)",
+      company: "Grabtaxi Holdings Pte Ltd",
+      location: "Singapore, Singapore",
+      start: "2 March 2026",
       end: "Present",
       summary:
-        "One or two sentences on your role, scope, and impact. Replace with your real experience.",
+        "One or two sentences on my role, scope, and impact. Replace with my real experience later.",
       highlights: [
-        "Outcome or responsibility you want to highlight",
+        "Outcome or responsibility I want to highlight",
         "Another measurable result or key contribution",
         "Cross-functional collaboration, tooling, or leadership",
       ],
     },
     {
-      title: "Previous role",
-      company: "Previous company",
-      location: "",
-      start: "2020",
-      end: "2023",
-      summary: "",
-      highlights: ["Focus area or achievement", "Technologies or domains you owned"],
+      title: "IT Intern",
+      company: "Abundant Accounting Pte Ltd",
+      location: "Singapore, Singapore",
+      start: "March 2023",
+      end: "August 2023",
+      summary: "Built and maintained the company’s website using WordPress in collaboration with another IT intern. Used Zapier to automate workflows and streamline daily business operations. Designed company brochures and digital marketing materials using Canva. Implemented Google Analytics tracking and applied SEO techniques to boost site visibility and engageent. Resolved IT issues promptly and maintained system reliability through daily performance checks. Demonstrated adaptability and strong problem-solving skills when learning new technologies and troubleshooting under pressure.",
+      highlights: ["Focus area or achievement", "Technologies"],
     },
   ],
 
   /**
-   * Education — degrees, bootcamps, or notable programs. Optional: location, details, highlights.
+   * Education — degrees
    */
   education: [
     {
-      degree: "B.Sc. in Your Field (or diploma / certificate name)",
-      school: "University or institution name",
-      location: "City, Country",
-      start: "2016",
-      end: "2020",
-      details: "Relevant coursework, honours, or thesis — optional one line.",
-      highlights: ["Dean's list", "Student club or competition — optional bullets"],
+      degree: "Bachelor of Information Technology (Major in Business Information Systems)",
+      school: "Monash University",
+      location: "Melbourne, Australia",
+      start: "29 July 2024",
+      end: "15 December2025",
+      details: "Relevant coursework, Add later",
+      highlights: ["Add later"],
     },
   ],
 
@@ -73,7 +69,7 @@ window.SITE_CONFIG = {
     {
       title: "Project two",
       description:
-        "Brief description of what you built, the problem it solved, and technologies you used.",
+        "Brief description of what I built, the problem it solved, and technologies I used.",
       image: "",
       liveUrl: "https://example.com",
       repoUrl: "https://github.com/yourusername/project-two",
@@ -93,7 +89,7 @@ window.SITE_CONFIG = {
     {
       name: "Languages & markup",
       skills: [
-        { name: "JavaScript / TypeScript", level: 90 },
+        { name: "JavaScript / TypeScript", level: 80 },
         { name: "HTML & CSS", level: 95 },
         { name: "Python", level: 75 },
       ],
@@ -111,7 +107,6 @@ window.SITE_CONFIG = {
     "REST APIs",
     "Responsive design",
     "Performance",
-    "A11y",
     "Agile",
     "Documentation",
   ],
