@@ -23,11 +23,15 @@ window.SITE_CONFIG = {
       start: "2 March 2026",
       end: "Present",
       summary:
-        "One or two sentences on my role, scope, and impact. Replace with my real experience later.",
+        "",
       highlights: [
-        "Outcome or responsibility I want to highlight",
-        "Another measurable result or key contribution",
-        "Cross-functional collaboration, tooling, or leadership",
+        "Developed a data processing workflow integrating Python, n8n, and Google Sheets to manage and visualize incident data (2023–2026).",
+        "Developed Python scripts in Cursor to extract, filter, and load raw data into Google Sheets.",
+        "Configured OAuth 2.0 authentication via Google Auth Platform to securely integrate Google Sheets with automation workflows",
+        "Built automation using n8n to process incoming data, trigger workflows and retrieve structured messages from Slack via bot integration(Bot ID & token) into google spreadsheet",
+        "Automated data transformation and cleaning, ensuring consistency and usability for analysis",
+        "Consolidated cleaned datasets into a structured Google Spreadsheet for reporting",
+        "Created interactive dashboards using Looker Studio to visualize multi-year trends (2023–2026)"
       ],
     },
     {
