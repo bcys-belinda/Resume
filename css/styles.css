@@ -603,6 +603,58 @@ section {
   border-color: rgba(91, 140, 255, 0.4);
 }
 
+/* ---- Languages ---- */
+.language-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 720px;
+}
+
+.language-row-simple {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  padding: 0.9rem 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.language-name {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.language-proficiency {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  text-align: right;
+  flex: 1;
+  min-width: min(100%, 18rem);
+  line-height: 1.45;
+}
+
+.language-item--bar {
+  padding: 1rem 1.15rem 1.15rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.language-item--bar .skill-row {
+  margin-bottom: 0;
+}
+
+.language-item-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
 /* ---- Contact ---- */
 .contact-grid {
   display: grid;

@@ -109,6 +109,18 @@
     tagsCloud.appendChild(btn);
   });
 
+  /* Languages */
+  const languagesSection = $("#languages");
+  const languagesList = $("#languages-list");
+  const langItems = cfg.languages || [];
+  if (langItems.length) {
+    languagesSection.hidden = false;
+    languagesList.innerHTML = "";
+    langItems.forEach((lang) => {
+      languagesList.appendChild(renderLanguageItem(lang));
+    });
+  }
+
   /* Formspree form action */
   const form = $("#contact-form");
   if (cfg.formspreeEndpoint && !cfg.formspreeEndpoint.includes("YOUR_FORM_ID")) {
@@ -255,5 +267,41 @@
       ${renderHighlights(edu.highlights)}
     `;
     return article;
+  }
+
+  function renderLanguageItem(lang) {
+    const wrap = document.createElement("div");
+    const level =
+      typeof lang.level === "number" && !Number.isNaN(lang.level)
+        ? Math.min(100, Math.max(0, lang.level))
+        : null;
+
+    if (level !== null) {
+      wrap.className = "language-item language-item--bar";
+      wrap.innerHTML = `
+        <div class="skill-row">
+          <div class="skill-label">
+            <span>${escapeHtml(lang.name || "")}</span>
+            <span>${level}%</span>
+          </div>
+          <div class="skill-track">
+            <div class="skill-fill" style="--target: ${level}%" data-level="${level}"></div>
+          </div>
+        </div>
+        ${
+          (lang.proficiency || "").trim()
+            ? `<p class="language-item-note">${escapeHtml(lang.proficiency.trim())}</p>`
+            : ""
+        }
+      `;
+      return wrap;
+    }
+
+    wrap.className = "language-item language-row-simple";
+    wrap.innerHTML = `
+      <span class="language-name">${escapeHtml(lang.name || "")}</span>
+      <span class="language-proficiency">${escapeHtml(lang.proficiency || "")}</span>
+    `;
+    return wrap;
   }
 })();

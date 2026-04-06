@@ -128,4 +128,13 @@ window.SITE_CONFIG = {
     "Agile",
     "Documentation",
   ],
+
+  /**
+   * Languages — spoken/written proficiency.
+   */
+  languages: [
+    { name: "English", proficiency: "Native or bilingual", level: 100 },
+    { name: "Chinese (Mandarin)", proficiency: "Full professional proficiency — reading, writing, speaking", level: 90},
+    { name: "Cantonese", proficiency: "Conversational", level: 55 },
+  ],
 };
