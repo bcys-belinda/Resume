@@ -112,56 +112,59 @@ window.SITE_CONFIG = {
       tags: ["Node.js", "Database"],
     },
   ],
-  /** Technical & soft skills*/
-  skillGroups: [
+
+  /**
+   *Technical & soft skills
+   */
+  skillCategories: [
     {
-      title: "Programming",
-      items: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "MySQL",
-        "MongoDB",
-        "Java",
-        "Python",
-        "CakePHP",
+      name: "Programming",
+      skills: [
+        { name: "HTML", level: 95 },
+        { name: "CSS", level: 95 },
+        { name: "JavaScript", level: 88 },
+        { name: "MySQL", level: 80 },
+        { name: "MongoDB", level: 78 },
+        { name: "Java", level: 75 },
+        { name: "Python", level: 82 },
+        { name: "CakePHP", level: 72 },
       ],
     },
     {
-      title: "Frameworks & tools",
-      items: [
-        "React Native",
-        "cPanel",
-        "WordPress",
-        "Canva",
-        "Figma",
-        "Lucidchart",
-        "RStudio",
-        "Zapier",
-        "n8n",
-        "Cursor",
-        "Looker Studio",
-        "Slack integration bot",
+      name: "Frameworks & tools",
+      skills: [
+        { name: "React Native", level: 78 },
+        { name: "cPanel", level: 80 },
+        { name: "WordPress", level: 85 },
+        { name: "Canva", level: 88 },
+        { name: "Figma", level: 85 },
+        { name: "Lucidchart", level: 80 },
+        { name: "RStudio", level: 75 },
+        { name: "Zapier", level: 86 },
+        { name: "n8n", level: 88 },
+        { name: "Cursor", level: 90 },
+        { name: "Looker Studio", level: 85 },
+        { name: "Slack integration bot", level: 82 },
       ],
     },
     {
-      title: "Web development",
-      items: [
-        "UI/UX design",
-        "Web & mobile app development",
-        "SEO",
-        "Google Analytics",
-        "Google Cloud APIs (Google Sheets API, OAuth 2.0)",
+      name: "Web development",
+      skills: [
+        { name: "UI/UX design", level: 85 },
+        { name: "Web & mobile app development", level: 82 },
+        { name: "SEO", level: 80 },
+        { name: "Google Analytics", level: 83 },
+        { name: "Google Cloud APIs (Google Sheets API, OAuth 2.0)", level: 84 },
       ],
     },
     {
-      title: "Soft skills",
-      items: [
-        "Critical thinking",
-        "Team collaboration",
-        "Communication",
-        "Time management",
-        "Business analysis",
+      name: "Soft skills",
+      skills: [
+        { name: "Critical thinking", level: 90 },
+        { name: "Team collaboration", level: 92 },
+        { name: "Communication", level: 90 },
+        { name: "Time management", level: 88 },
+        { name: "Business analysis", level: 85 },
       ],
     },
   ],

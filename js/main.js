@@ -75,21 +75,28 @@
     grid.appendChild(card);
   });
 
-  /* Skills */
+  /* Skills*/
   const skillsBars = $("#skills-bars");
   skillsBars.innerHTML = "";
-  (cfg.skillGroups || []).forEach((g) => {
-    const block = document.createElement("div");
-    block.className = "skill-group";
-    const items = (g.items || [])
-      .filter(Boolean)
-      .map((t) => escapeHtml(t))
-      .join(", ");
-    block.innerHTML = `
-        <h3 class="skill-group__title">${escapeHtml(g.title || "")}</h3>
-        <p class="skill-group__items">${items}</p>
+  (cfg.skillCategories || []).forEach((cat) => {
+    const wrap = document.createElement("div");
+    wrap.className = "skill-category";
+    wrap.innerHTML = `<h3>${escapeHtml(cat.name)}</h3>`;
+    (cat.skills || []).forEach((s) => {
+      const row = document.createElement("div");
+      row.className = "skill-row";
+      row.innerHTML = `
+        <div class="skill-label">
+          <span>${escapeHtml(s.name)}</span>
+          <span>${s.level}%</span>
+        </div>
+        <div class="skill-track">
+          <div class="skill-fill" style="--target: ${Number(s.level)}%" data-level="${Number(s.level)}"></div>
+        </div>
       `;
-    skillsBars.appendChild(block);
+      wrap.appendChild(row);
+    });
+    skillsBars.appendChild(wrap);
   });
 
   /* Languages */
