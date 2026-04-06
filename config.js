@@ -62,7 +62,7 @@ window.SITE_CONFIG = {
       end: "15 December 2025",
       details: "Core Unites Completed: ",
       highlights: ["Business Information Analysis", 
-                  "Programming Fundamentals in java",
+                  "Programming Fundamentals in Java",
                   "Business Information Systems and Processes",
                   "Mobile Application Development",
                   "Full Stack Development",

@@ -304,4 +304,29 @@
     `;
     return wrap;
   }
+
+  /* Scroll-triggered section reveals */
+  (function initScrollMotion() {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (reduce.matches) {
+      document.querySelectorAll("main section.js-reveal-section").forEach((el) => {
+        el.classList.add("is-inview");
+      });
+      return;
+    }
+    document.body.classList.add("motion-ok", "hero-ready");
+
+    const sections = document.querySelectorAll("main section.js-reveal-section");
+    const sectionIo = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add("is-inview");
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -8% 0px" }
+    );
+    sections.forEach((s) => sectionIo.observe(s));
+  })();
 })();
