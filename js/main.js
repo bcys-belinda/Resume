@@ -129,6 +129,23 @@
     skillsBars.appendChild(wrap);
   });
 
+  /* Skills*/
+  (function initSkillsTicker() {
+    const ticker = $("#skills-ticker");
+    const raw = cfg.skillsAside?.ticker;
+    if (!ticker || !raw?.length) {
+      const aside = document.querySelector(".split-panel--skills .split-panel__aside");
+      if (aside) aside.hidden = true;
+      const split = document.querySelector(".split-panel--skills");
+      if (split) split.classList.add("split-panel--single");
+      return;
+    }
+    const doubled = [...raw, ...raw];
+    ticker.innerHTML = `<div class="tech-ticker__track">${doubled
+      .map((t) => `<span class="tech-ticker__chip">${escapeHtml(t)}</span>`)
+      .join("")}</div>`;
+  })();
+
   /* Languages */
   const languagesSection = $("#languages");
   const languagesList = $("#languages-list");
@@ -139,6 +156,11 @@
     langItems.forEach((lang) => {
       languagesList.appendChild(renderLanguageItem(lang));
     });
+    renderLanguageRings(langItems);
+  } else {
+    const aside = document.querySelector(".split-panel--languages .split-panel__aside");
+    if (aside) aside.hidden = true;
+    document.querySelector(".split-panel--languages")?.classList.add("split-panel--single");
   }
 
   /* Formspree form action */
@@ -201,6 +223,62 @@
     { threshold: 0.2 }
   );
   fills.forEach((el) => io.observe(el));
+
+  initProjectCarousel();
+
+  function initProjectCarousel() {
+    const root = document.querySelector("[data-projects-carousel]");
+    if (!root) return;
+    const viewport = root.querySelector(".projects-carousel__viewport");
+    const prev = root.querySelector("[data-carousel-prev]");
+    const next = root.querySelector("[data-carousel-next]");
+    if (!viewport || !prev || !next) return;
+    const step = () => Math.max(260, Math.min(viewport.clientWidth * 0.72, 380));
+    prev.addEventListener("click", () =>
+      viewport.scrollBy({ left: -step(), behavior: "smooth" })
+    );
+    next.addEventListener("click", () =>
+      viewport.scrollBy({ left: step(), behavior: "smooth" })
+    );
+    viewport.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        viewport.scrollBy({ left: -step(), behavior: "smooth" });
+      }
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        viewport.scrollBy({ left: step(), behavior: "smooth" });
+      }
+    });
+  }
+
+  function renderLanguageRings(items) {
+    const el = $("#languages-visual");
+    if (!el || !items.length) return;
+    el.innerHTML = items
+      .map((lang) => {
+        const level =
+          typeof lang.level === "number" && !Number.isNaN(lang.level)
+            ? Math.min(100, Math.max(0, lang.level))
+            : null;
+        if (level !== null) {
+          return `<div class="lang-ring-row">
+          <div class="lang-ring" style="--pct: ${level}" role="img" aria-label="${escapeAttr(
+            lang.name || ""
+          )} ${level} percent"></div>
+          <div class="lang-ring-meta">
+            <span class="lang-ring-name">${escapeHtml(lang.name || "")}</span>
+            <span class="lang-ring-pct">${level}%</span>
+          </div>
+        </div>`;
+        }
+        return `<div class="lang-ring-row lang-ring-row--plain">
+          <span class="lang-ring-name">${escapeHtml(lang.name || "")}</span>
+          <span class="lang-ring-sub">${escapeHtml((lang.proficiency || "").trim())}</span>
+        </div>`;
+      })
+      .join("");
+  }
 
   function setFormStatus(el, cls, msg) {
     el.className = "form-status" + (cls ? " " + cls : "");

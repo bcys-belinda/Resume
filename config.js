@@ -171,8 +171,26 @@ window.SITE_CONFIG = {
     },
   ],
 
+  /** Sidebar */
+  skillsAside: {
+    ticker: [
+      "Python",
+      "JavaScript",
+      "n8n",
+      "WordPress",
+      "React Native",
+      "Google Cloud",
+      "HTML",
+      "CSS",
+      "Zapier",
+      "Looker Studio",
+      "MySQL",
+      "MongoDB",
+    ],
+  },
+
   /**
-   * Languages — spoken/written proficiency.
+   * Languages - spoken/written proficiency.
    */
   languages: [
     { name: "English", proficiency: "Native or bilingual", level: 100 },

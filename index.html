@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <!-- Bump ?v= on css/config/main when the browser shows old content (cache). -->
-    <link rel="stylesheet" href="css/styles.css?v=8" />
+    <link rel="stylesheet" href="css/styles.css?v=9" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -89,7 +89,32 @@
         <div class="container">
           <p class="section-label">Work</p>
           <h2 class="section-title" id="projects-heading">Project showcase</h2>
-          <div class="projects-grid" id="projects-grid"></div>
+          <p class="section-hint">Use the arrows or swipe to browse projects.</p>
+          <div class="projects-carousel" data-projects-carousel>
+            <button
+              type="button"
+              class="carousel-btn carousel-btn--prev"
+              aria-label="Show previous projects"
+              data-carousel-prev
+            >
+              <span class="carousel-btn__inner" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+              </span>
+            </button>
+            <div class="projects-carousel__viewport" tabindex="0" role="region" aria-label="Project carousel">
+              <div class="projects-grid projects-grid--carousel" id="projects-grid"></div>
+            </div>
+            <button
+              type="button"
+              class="carousel-btn carousel-btn--next"
+              aria-label="Show next projects"
+              data-carousel-next
+            >
+              <span class="carousel-btn__inner" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+              </span>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -97,7 +122,21 @@
         <div class="container">
           <p class="section-label">Expertise</p>
           <h2 class="section-title" id="skills-heading">Technical &amp; soft skills</h2>
-          <div id="skills-bars"></div>
+          <div class="split-panel split-panel--skills">
+            <div class="split-panel__main">
+              <div id="skills-bars"></div>
+            </div>
+            <aside class="split-panel__aside" aria-label="Tools overview">
+              <div class="aside-card">
+                <div class="aside-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg>
+                </div>
+                <h3 class="aside-card__title">Tools in use</h3>
+                <p class="aside-card__lead">A sample of technologies from my profile—scrolls for a quick scan.</p>
+                <div class="tech-ticker" id="skills-ticker" aria-hidden="true"></div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -105,7 +144,21 @@
         <div class="container">
           <p class="section-label">Communication</p>
           <h2 class="section-title" id="languages-heading">Languages</h2>
-          <div class="language-list" id="languages-list"></div>
+          <div class="split-panel split-panel--languages">
+            <div class="split-panel__main">
+              <div class="language-list" id="languages-list"></div>
+            </div>
+            <aside class="split-panel__aside" aria-label="Proficiency overview">
+              <div class="aside-card aside-card--rings">
+                <div class="aside-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3 class="aside-card__title">Proficiency rings</h3>
+                <p class="aside-card__lead">Same levels as the list—rings give a quick visual read.</p>
+                <div class="lang-rings" id="languages-visual"></div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -147,7 +200,7 @@
       </div>
     </footer>
 
-    <script src="config.js?v=7"></script>
-    <script src="js/main.js?v=7"></script>
+    <script src="config.js?v=8"></script>
+    <script src="js/main.js?v=8"></script>
   </body>
 </html>
