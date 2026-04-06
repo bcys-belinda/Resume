@@ -59,7 +59,7 @@ window.SITE_CONFIG = {
       school: "Monash University",
       location: "Melbourne, Australia",
       start: "29 July 2024",
-      end: "15 December2025",
+      end: "15 December 2025",
       details: "Relevant Coursework: ",
       highlights: [""],
     },
@@ -76,9 +76,9 @@ window.SITE_CONFIG = {
 
   projects: [
     {
-      title: "Resume website",
+      title: "My Resume website",
       description:
-        "This site — a responsive single-page portfolio with animated skills, project cards, and a contact form. Built with semantic HTML, modern CSS, and a small amount of vanilla JavaScript.",
+        "A responsive single-page portfolio with animated skills, project cards, and a contact form. Built with semantic HTML, modern CSS, and a small amount of JavaScript.",
       image: "",
       liveUrl: "#",
       repoUrl: "https://github.com/bcys-belinda/Resume",
