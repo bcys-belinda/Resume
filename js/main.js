@@ -81,8 +81,21 @@
   (cfg.skillCategories || []).forEach((cat) => {
     const wrap = document.createElement("div");
     wrap.className = "skill-category";
-    wrap.innerHTML = `<h3>${escapeHtml(cat.name)}</h3>`;
-    (cat.skills || []).forEach((s) => {
+
+    const legacyBars = !cat.highlights && !cat.more && cat.skills?.length;
+    const bars = legacyBars
+      ? cat.skills
+      : cat.highlights || [];
+
+    let inner = `<h3>${escapeHtml(cat.name)}</h3>`;
+
+    if (!legacyBars && bars.length) {
+      inner += `<p class="skill-highlights-note">Strongest in this area</p>`;
+    }
+
+    wrap.innerHTML = inner;
+
+    bars.forEach((s) => {
       const row = document.createElement("div");
       row.className = "skill-row";
       row.innerHTML = `
@@ -96,6 +109,23 @@
       `;
       wrap.appendChild(row);
     });
+
+    const moreItems = legacyBars ? [] : cat.more || [];
+    if (moreItems.length) {
+      const moreWrap = document.createElement("div");
+      moreWrap.className = "skill-more";
+      const label =
+        bars.length > 0
+          ? "Also used"
+          : "";
+      const tags = moreItems
+        .filter(Boolean)
+        .map((t) => `<span class="skill-chip">${escapeHtml(t)}</span>`)
+        .join("");
+      moreWrap.innerHTML = `${label ? `<p class="skill-more-label">${label}</p>` : ""}<div class="skill-chips">${tags}</div>`;
+      wrap.appendChild(moreWrap);
+    }
+
     skillsBars.appendChild(wrap);
   });
 

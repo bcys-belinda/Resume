@@ -482,15 +482,69 @@ section {
 #skills-bars {
   display: flex;
   flex-direction: column;
-  gap: 2.25rem;
-  max-width: 720px;
+  gap: 1.25rem;
+  max-width: 800px;
+}
+
+.skill-category {
+  padding: 1.35rem 1.4rem 1.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color 0.2s;
+}
+
+.skill-category:hover {
+  border-color: rgba(91, 140, 255, 0.2);
 }
 
 .skill-category h3 {
-  font-size: 1rem;
+  font-size: 1.02rem;
   font-weight: 600;
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
+  color: var(--text);
+  letter-spacing: -0.02em;
+}
+
+.skill-highlights-note {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+.skill-more {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.skill-more-label {
+  margin: 0 0 0.55rem;
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-chip {
+  display: inline-block;
+  font-size: 0.82rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  line-height: 1.35;
 }
 
 .skill-row {
