@@ -63,12 +63,12 @@ window.SITE_CONFIG = {
 
   projects: [
     {
-      title: "Portfolio & resume website",
+      title: "Resume website",
       description:
         "This site — a responsive single-page portfolio with animated skills, project cards, and a contact form. Built with semantic HTML, modern CSS, and a small amount of vanilla JavaScript.",
       image: "",
       liveUrl: "#",
-      repoUrl: "https://github.com/yourusername/your-resume-site",
+      repoUrl: "https://github.com/bcys-belinda/Resume",
       tags: ["HTML", "CSS", "JavaScript", "Accessibility"],
     },
     {
@@ -77,7 +77,7 @@ window.SITE_CONFIG = {
         "Brief description of what I built, the problem it solved, and technologies I used.",
       image: "",
       liveUrl: "https://example.com",
-      repoUrl: "https://github.com/yourusername/project-two",
+      repoUrl: "https://github.com/myusername/project-two",
       tags: ["React", "TypeScript", "API"],
     },
     {
@@ -86,7 +86,7 @@ window.SITE_CONFIG = {
         "Another highlight — keep descriptions concise and outcome-focused.",
       image: "",
       liveUrl: "https://example.com",
-      repoUrl: "https://github.com/yourusername/project-three",
+      repoUrl: "https://github.com/myusername/project-three",
       tags: ["Node.js", "Database"],
     },
   ],
