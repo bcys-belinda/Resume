@@ -112,30 +112,58 @@ window.SITE_CONFIG = {
       tags: ["Node.js", "Database"],
     },
   ],
-  skillCategories: [
+  /** Technical & soft skills*/
+  skillGroups: [
     {
-      name: "Languages & markup",
-      skills: [
-        { name: "JavaScript / TypeScript", level: 80 },
-        { name: "HTML & CSS", level: 95 },
-        { name: "Python", level: 75 },
+      title: "Programming",
+      items: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MySQL",
+        "MongoDB",
+        "Java",
+        "Python",
+        "CakePHP",
       ],
     },
     {
-      name: "Frameworks & tools",
-      skills: [
-        { name: "React", level: 85 },
-        { name: "Git & CI", level: 88 },
-        { name: "Testing", level: 70 },
+      title: "Frameworks & tools",
+      items: [
+        "React Native",
+        "cPanel",
+        "WordPress",
+        "Canva",
+        "Figma",
+        "Lucidchart",
+        "RStudio",
+        "Zapier",
+        "n8n",
+        "Cursor",
+        "Looker Studio",
+        "Slack integration bot",
       ],
     },
-  ],
-  skillTags: [
-    "REST APIs",
-    "Responsive design",
-    "Performance",
-    "Agile",
-    "Documentation",
+    {
+      title: "Web development",
+      items: [
+        "UI/UX design",
+        "Web & mobile app development",
+        "SEO",
+        "Google Analytics",
+        "Google Cloud APIs (Google Sheets API, OAuth 2.0)",
+      ],
+    },
+    {
+      title: "Soft skills",
+      items: [
+        "Critical thinking",
+        "Team collaboration",
+        "Communication",
+        "Time management",
+        "Business analysis",
+      ],
+    },
   ],
 
   /**
