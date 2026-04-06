@@ -79,6 +79,9 @@
   const skillsBars = $("#skills-bars");
   skillsBars.innerHTML = "";
   (cfg.skillCategories || []).forEach((cat) => {
+    const row = document.createElement("div");
+    row.className = "skills-pair-row";
+
     const wrap = document.createElement("div");
     wrap.className = "skill-category";
 
@@ -96,9 +99,9 @@
     wrap.innerHTML = inner;
 
     bars.forEach((s) => {
-      const row = document.createElement("div");
-      row.className = "skill-row";
-      row.innerHTML = `
+      const skillRow = document.createElement("div");
+      skillRow.className = "skill-row";
+      skillRow.innerHTML = `
         <div class="skill-label">
           <span>${escapeHtml(s.name)}</span>
           <span>${s.level}%</span>
@@ -107,7 +110,7 @@
           <div class="skill-fill" style="--target: ${Number(s.level)}%" data-level="${Number(s.level)}"></div>
         </div>
       `;
-      wrap.appendChild(row);
+      wrap.appendChild(skillRow);
     });
 
     const moreItems = legacyBars ? [] : cat.more || [];
@@ -126,25 +129,28 @@
       wrap.appendChild(moreWrap);
     }
 
-    skillsBars.appendChild(wrap);
-  });
+    const mainCol = document.createElement("div");
+    mainCol.className = "skills-pair-row__main";
+    mainCol.appendChild(wrap);
 
-  /* Skills*/
-  (function initSkillsTicker() {
-    const ticker = $("#skills-ticker");
-    const raw = cfg.skillsAside?.ticker;
-    if (!ticker || !raw?.length) {
-      const aside = document.querySelector(".split-panel--skills .split-panel__aside");
-      if (aside) aside.hidden = true;
-      const split = document.querySelector(".split-panel--skills");
-      if (split) split.classList.add("split-panel--single");
-      return;
+    const aside = document.createElement("aside");
+    aside.className = "skills-pair-row__aside";
+    const tool = (cat.favourite || cat.toolsInUse || "").trim();
+    aside.innerHTML = `
+      <div class="favourite-card">
+        <p class="favourite-label">Favourite</p>
+        <p class="favourite-value">${tool ? escapeHtml(tool) : "—"}</p>
+      </div>
+    `;
+    if (!tool) {
+      aside.hidden = true;
+      row.classList.add("skills-pair-row--single");
     }
-    const doubled = [...raw, ...raw];
-    ticker.innerHTML = `<div class="tech-ticker__track">${doubled
-      .map((t) => `<span class="tech-ticker__chip">${escapeHtml(t)}</span>`)
-      .join("")}</div>`;
-  })();
+
+    row.appendChild(mainCol);
+    row.appendChild(aside);
+    skillsBars.appendChild(row);
+  });
 
   /* Languages */
   const languagesSection = $("#languages");

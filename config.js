@@ -119,6 +119,7 @@ window.SITE_CONFIG = {
   skillCategories: [
     {
       name: "Programming",
+      favourite: "Python",
       highlights: [
         { name: "HTML & CSS", level: 95 },
         { name: "JavaScript", level: 88 },
@@ -128,6 +129,7 @@ window.SITE_CONFIG = {
     },
     {
       name: "Frameworks & tools",
+      favourite: "n8n",
       highlights: [
         { name: "n8n", level: 88 },
         { name: "RStudio", level: 85 },
@@ -148,6 +150,7 @@ window.SITE_CONFIG = {
     },
     {
       name: "Web development",
+      favourite: "Google Cloud",
       highlights: [
         { name: "UI/UX design", level: 84 },
         { name: "Web & mobile app development", level: 82 },
@@ -160,6 +163,7 @@ window.SITE_CONFIG = {
     },
     {
       name: "Soft skills",
+      favourite: "Team collaboration",
       highlights: [],
       more: [
         "Critical thinking",
@@ -170,24 +174,6 @@ window.SITE_CONFIG = {
       ],
     },
   ],
-
-  /** Sidebar */
-  skillsAside: {
-    ticker: [
-      "Python",
-      "JavaScript",
-      "n8n",
-      "WordPress",
-      "React Native",
-      "Google Cloud",
-      "HTML",
-      "CSS",
-      "Zapier",
-      "Looker Studio",
-      "MySQL",
-      "MongoDB",
-    ],
-  },
 
   /**
    * Languages - spoken/written proficiency.
