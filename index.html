@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional resume and portfolio — projects, skills, and contact."
+    />
+    <title>Portfolio & Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#" id="site-name">Belinda Cheah Yi Shuen</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+          <a id="nav-linkedin" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a id="nav-github" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero-grid">
+          <div>
+            <p class="hero-badge"><span class="dot" aria-hidden="true"></span> Open to opportunities</p>
+            <h1 id="hero-heading"><span id="hero-name">Belinda Cheah Yi Shuen</span></h1>
+            <p class="hero-lead" id="hero-tagline">Professional tagline.</p>
+            <p id="hero-bio" class="hero-lead" style="max-width: 48ch">
+              Short bio.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Get in touch</a>
+              <a class="btn btn-ghost" href="#projects">View work</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Quick facts">
+            <h2>At a glance</h2>
+            <p>
+              Focused on programming, collaborating with teams, and continuous learning.
+            </p>
+            <div class="hero-meta">
+              <span id="hero-location">Location</span>
+              <span
+                >Email:
+                <a id="contact-email-display" href="mailto:hello@example.com">belindacheahyishuen@gmail.com</a></span
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="experience" class="resume-section" aria-labelledby="experience-heading" hidden>
+        <div class="container">
+          <p class="section-label">Career</p>
+          <h2 class="section-title" id="experience-heading">Experience</h2>
+          <div class="resume-list" id="experience-list"></div>
+        </div>
+      </section>
+
+      <section id="education" class="resume-section" aria-labelledby="education-heading" hidden>
+        <div class="container">
+          <p class="section-label">Learning</p>
+          <h2 class="section-title" id="education-heading">Education</h2>
+          <div class="resume-list" id="education-list"></div>
+        </div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+          <p class="section-label">Work</p>
+          <h2 class="section-title" id="projects-heading">Project showcase</h2>
+          <div class="projects-grid" id="projects-grid"></div>
+        </div>
+      </section>
+
+      <section id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <p class="section-label">Expertise</p>
+          <h2 class="section-title" id="skills-heading">Skills & tools</h2>
+          <div class="skills-layout">
+            <div id="skills-bars"></div>
+            <div>
+              <div class="skills-icons">
+                <h3>Focus areas</h3>
+                <div class="icon-row" aria-hidden="true">
+                  <span class="icon-item" title="Code">⌘</span>
+                  <span class="icon-item" title="Design">◆</span>
+                  <span class="icon-item" title="Ship">▸</span>
+                  <span class="icon-item" title="Collaborate">◎</span>
+                </div>
+              </div>
+              <p class="section-label" style="margin-top: 1.5rem">Also comfortable with</p>
+              <div class="tags-cloud" id="skills-tags"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <p class="section-label">Contact</p>
+          <h2 class="section-title" id="contact-heading">Let’s talk</h2>
+          <div class="contact-grid">
+            <div>
+              <p class="contact-lead">
+                Prefer email? Reach me directly, or use the form — messages are delivered via
+                <a href="https://formspree.io" target="_blank" rel="noopener noreferrer">Formspree</a>.
+              </p>
+              <p class="contact-lead">
+                Update <code style="color: var(--accent)">formspreeEndpoint</code> in
+                <code style="color: var(--accent)">config.js</code> with my form URL after I create a form at
+                Formspree.
+              </p>
+            </div>
+            <form class="form" id="contact-form" action="" method="POST">
+              <div>
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required autocomplete="email" />
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <input type="text" name="_gotcha" style="display: none" tabindex="-1" autocomplete="off" />
+              <button class="btn btn-primary" type="submit">Send message</button>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="site-name-footer">Belinda Cheah Yi Shuen</span> — Built as a personal portfolio site.</p>
+      </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
