@@ -130,16 +130,17 @@ window.SITE_CONFIG = {
       name: "Frameworks & tools",
       highlights: [
         { name: "n8n", level: 88 },
-        { name: "WordPress", level: 85 },
-        { name: "Cursor", level: 90 },
+        { name: "RStudio", level: 85 },
+        { name: "Cursor", level: 75 },
+        { name: "Figma", level: 75 },
+        { name: "Canva", level: 75 },
       ],
       more: [
         "React Native",
         "cPanel",
-        "Canva",
         "Figma",
         "Lucidchart",
-        "RStudio",
+        "WordPress",
         "Zapier",
         "Looker Studio",
         "Slack integration bot",
@@ -148,12 +149,12 @@ window.SITE_CONFIG = {
     {
       name: "Web development",
       highlights: [
-        { name: "Google Cloud APIs (Sheets, OAuth 2.0)", level: 84 },
-        { name: "SEO & analytics", level: 82 },
+        { name: "UI/UX design", level: 84 },
+        { name: "Web & mobile app development", level: 82 },
       ],
       more: [
-        "UI/UX design",
-        "Web & mobile app development",
+        "Google Cloud APIs (Sheets, OAuth 2.0)",
+        "SEO & analytics",
         "Google Analytics",
       ],
     },
