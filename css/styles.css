@@ -479,6 +479,12 @@ section {
 }
 
 /* ---- Skills ---- */
+#skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
 .skills-layout {
   display: grid;
   gap: 2.5rem;
