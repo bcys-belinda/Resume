@@ -9,11 +9,11 @@ window.SITE_CONFIG = {
     linkedin: "https://www.linkedin.com/in/myprofile",
     github: "https://github.com/bcys-belinda",
   },
-  /** Replace with my Formspree form endpoint: https://formspree.io */
+ 
   formspreeEndpoint: "https://formspree.io/f/mkopkbdo",
 
   /**
-   * Work history — newest first. Optional: location, summary, highlights (bullet strings).
+   * Work history
    */
   experience: [
     {
@@ -51,7 +51,7 @@ window.SITE_CONFIG = {
   ],
 
   /**
-   * Education — degrees
+   * Education — degrees, diplomas
    */
   education: [
     {
