@@ -21,7 +21,7 @@ window.SITE_CONFIG = {
       company: "Grabtaxi Holdings Pte Ltd",
       location: "Singapore, Singapore",
       start: "2 March 2026",
-      end: "Present",
+      end: "26 June 2026",
       summary:
         "",
       highlights: [
