@@ -109,13 +109,13 @@ window.SITE_CONFIG = {
       tags: ["HTML", "CSS", "JavaScript", "Accessibility"],
     },
     {
-      title: "Project two",
+      title: "Bunny Log",
       description:
-        "Brief description of what I built, the problem it solved, and technologies I used.",
+        "A website I created to log and track my bunny activities, featuring a user-friendly interface and interactive elements.",
       image: "",
-      liveUrl: "https://example.com",
-      repoUrl: "https://github.com/myusername/project-two",
-      tags: ["React", "TypeScript", "API"],
+      liveUrl: "https://bcys-belinda.github.io/Bunny-Log/",
+      repoUrl: "https://github.com/bcys-belinda/Bunny-Log",
+      tags: ["JavaScript", "HTML", "CSS"],
     },
     {
       title: "Project three",
